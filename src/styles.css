@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.navbar,
+.navItem,
+.iconContainer,
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar {
+  background-color: #333;
+  height: 70px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.iconContainer {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: #555;
+  padding: 8px;
+  border-radius: 100%;
+}
+
+.iconContainer:hover {
+  background-color: #777;
+}
+
+.navItem {
+  position: relative;
+}
+
+.dropdown {
+  background: #333;
+  color: #fff;
+  position: absolute;
+  top: 125%;
+  right: 40%;
+  transition: height 0.5s ease;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.primaryDropdownMenu,
+.secondaryDropdownMenu {
+  padding: 10px 15px;
+  transition: all 0.5s ease;
+}
+
+.dropdownItem {
+  width: 170px;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.dropdownItemIcon {
+  font-size: 1.3rem;
+  position: relative;
+  top: 2px;
+  margin-right: 7px;
+}
+
+.dropdownItemIcon:last-child {
+  margin-right: 0;
+}
+
+.dropdownItem:hover {
+  background-color: rgb(73, 71, 71);
+}
+
+.dropdownItemText {
+  position: relative;
+  top: -3px;
+}
+
+/* primary Dropdown animation */
+.slide-primary-enter {
+  position: absolute;
+  transform: translateX(-100%);
+}
+.slide-primary-enter-active {
+  transform: translateX(0);
+}
+.slide-primary-exit {
+  position: absolute;
+  transform: translateX(0);
+}
+.slide-primary-exit-active {
+  transform: translateX(-100%);
+}
+
+/* secondary Dropdown animation */
+.slide-secondary-enter {
+  transform: translateX(100%);
+}
+.slide-secondary-enter-active {
+  transform: translateX(0);
+}
+.slide-secondary-exit {
+  transform: translateX(0);
+}
+.slide-secondary-exit-active {
+  transform: translateX(100%);
+}
